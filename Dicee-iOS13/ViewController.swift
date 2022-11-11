@@ -10,11 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var diceOne: UIImageView! //IBOutlet is used were the code makes changes to the App
+    @IBOutlet weak var diceTwo: UIImageView! //IBOutlet is used were the code makes changes to the App
+    @IBOutlet weak var diceThree: UIImageView! //IBOutlet is used were the code makes changes to the App
+    @IBOutlet weak var diceFour: UIImageView! //IBOutlet is used were the code makes changes to the App
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        diceTwo.image = #imageLiteral(resourceName: "DiceTwo")//"#imageLiteral(" This is the new method to use this feature
+        diceThree.image = #imageLiteral(resourceName: "DiceFour")//"#imageLiteral(" This is the new method to use this feature
+        diceFour.image = #imageLiteral(resourceName: "DiceThree")//"#imageLiteral(" This is the new method to use this feature
+        
     }
-
-
+    
+    @IBAction func rollDiceButton(_ sender: UIButton) {
+        
+        print("Button Pressed")
+        diceOne.image = #imageLiteral(resourceName: "DiceFour")//"#imageLiteral(" This is the new method to use this feature
+        diceTwo.image = #imageLiteral(resourceName: "DiceOne")//"#imageLiteral(" This is the new method to use this feature
+        diceThree.image = #imageLiteral(resourceName: "DiceThree")//"#imageLiteral(" This is the new method to use this feature
+        diceFour.image = #imageLiteral(resourceName: "DiceTwo")//"#imageLiteral(" This is the new method to use this feature
+        
+    }
+    
 }
 
